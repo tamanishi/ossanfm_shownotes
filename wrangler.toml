@@ -1,4 +1,4 @@
-name = "d1-sample"
+name = "ossanfm-shownotes"
 main = "src/index.ts"
 compatibility_date = "2023-09-22"
 
@@ -49,3 +49,9 @@ compatibility_date = "2023-09-22"
 # [[migrations]]
 # tag = "v1"
 # new_classes = ["MyDurableObject"]
+
+[[d1_databases]]
+binding = "DB" # i.e. available in your Worker on env.DB
+database_name = "ossanfm_episodes"
+database_id = "a598d1de-43b8-43b0-8f58-d8e528cff1e3"
+
