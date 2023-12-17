@@ -69,14 +69,14 @@ export default {
     }
 
     const parser = new XMLParser(options);
-    let feedObj = parser.parse(response);
+    const feedObj = parser.parse(response);
 
     const db = new Kysely<Database>({ dialect: new D1Dialect({ database: env.DB }) });
 
     for (const elm of feedObj.rss.channel.item) {
-      let descObj = parser.parse(elm.description);
+      const descObj = parser.parse(elm.description);
 
-      let pubDate = new Date(elm.pubDate);
+      const pubDate = new Date(elm.pubDate);
       const result = await db
         .insertInto('episodes')
         .values({
