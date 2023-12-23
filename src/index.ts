@@ -83,7 +83,7 @@ export default {
         .select(({ fn, val, ref }) => [
           fn.count<string>('episodes.title').as('title_count')
         ])
-        .where('title', '=', elm.title)
+        .where('link', '=', elm.link)
         .where('pubDate', '=', pubDate.toISOString())
         .executeTakeFirstOrThrow();
 
@@ -105,7 +105,7 @@ export default {
         for (const liElm of ulElm.li) {
           if (liElm.a) {
             if (liElm.a.$text === undefined) {
-              // console.log("========================== TODO: これを捨ててる " + elm.title + " " + JSON.stringify(liElm));
+              console.log("========================== TODO: これを捨ててる " + elm.title + " " + JSON.stringify(liElm));
               continue;
             }
             await db
@@ -118,7 +118,7 @@ export default {
               .executeTakeFirstOrThrow();
           } else {
             if (typeof (liElm) === 'object') {
-              // console.log("========================== TODO: これを捨ててる " + elm.title + " " + JSON.stringify(liElm));
+              console.log("========================== TODO: これを捨ててる " + elm.title + " " + JSON.stringify(liElm));
               continue;
             }
           }

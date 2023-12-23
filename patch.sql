@@ -1,0 +1,14 @@
+INSERT INTO Shownotes (episodeId, title, link) VALUES(29,'サイナス・リンス キット60包 - 鼻洗浄ならニールメッド','https://www.neilmed.jp/product/sinusrinse_k_60/');
+INSERT INTO Shownotes (episodeId, title, link) VALUES(41,'[#15 締め切り駆動で本を読んでいる話 - ゆるテク","Podcast on Spotify]','https://open.spotify.com/episode/0ZFheltV1B5r2PNZVDeZw8');
+INSERT INTO Shownotes (episodeId, title, link) VALUES(259,'最後にして最初のアイドル - Amazon','https://www.amazon.co.jp/dp/B0798S7N12/');
+INSERT INTO Shownotes (episodeId, title, link) VALUES(259,'短編版','https://www.amazon.co.jp/dp/B01NCA4FBB');
+INSERT INTO Shownotes (episodeId, title, link) VALUES(263,'Ultravoice XM8500','https://www.soundhouse.co.jp/products/detail/item/19370/');
+INSERT INTO Shownotes (episodeId, title, link) VALUES(263,'UMC202HD','https://www.soundhouse.co.jp/products/detail/item/212161/');
+INSERT INTO Shownotes (episodeId, title, link) VALUES(263,'PreSonus Studio One Prime','https://www.mi7.co.jp/products/presonus/studioone/prime/');
+INSERT INTO Shownotes (episodeId, title, link) VALUES(263,'Auphonic','https://auphonic.com/');
+INSERT INTO Shownotes (episodeId, title, link) VALUES(267,'カフェイン - Wikipedia','https://ja.wikipedia.org/wiki/%E3%82%AB%E3%83%95%E3%82%A7%E3%82%A4%E3%83%B3');
+INSERT INTO Shownotes (episodeId, title, link) VALUES(267,'カフェイン中毒','https://ja.wikipedia.org/wiki/%E3%82%AB%E3%83%95%E3%82%A7%E3%82%A4%E3%83%B3%E4%B8%AD%E6%AF%92');
+INSERT INTO Shownotes (episodeId, title, link) VALUES(267,'カフェイン依存症　前編','http://mimorimisa.com/%E5%AE%9F%E4%BD%93%E9%A8%93/20181020/763/');
+INSERT INTO Shownotes (episodeId, title, link) VALUES(269,'カフェイン - Wikipedia','https://ja.wikipedia.org/wiki/%E3%82%AB%E3%83%95%E3%82%A7%E3%82%A4%E3%83%B3');
+INSERT INTO Shownotes (episodeId, title, link) VALUES(269,'カフェイン中毒','https://ja.wikipedia.org/wiki/%E3%82%AB%E3%83%95%E3%82%A7%E3%82%A4%E3%83%B3%E4%B8%AD%E6%AF%92');
+INSERT INTO Shownotes (episodeId, title, link) VALUES(269,'カフェイン依存症　前編','http://mimorimisa.com/%E5%AE%9F%E4%BD%93%E9%A8%93/20181020/763/');
