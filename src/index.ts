@@ -77,7 +77,21 @@ export default {
       const descObj = parser.parse(elm.description);
 
       const pubDate = new Date(elm.pubDate);
-      const result = await db
+
+      const selectResult = await db
+        .selectFrom('episodes')
+        .select(({ fn, val, ref }) => [
+          fn.count<string>('episodes.title').as('title_count')
+        ])
+        .where('title', '=', elm.title)
+        .where('pubDate', '=', pubDate.toISOString())
+        .executeTakeFirstOrThrow();
+
+      if (parseInt(selectResult.title_count) > 0) {
+        continue;
+      }
+
+      const insertResult = await db
         .insertInto('episodes')
         .values({
           title: elm.title,
@@ -88,7 +102,7 @@ export default {
         .executeTakeFirstOrThrow();
 
       for (const ulElm of descObj.ul) {
-        for(const liElm of ulElm.li) {
+        for (const liElm of ulElm.li) {
           if (liElm.a) {
             if (liElm.a.$text === undefined) {
               // console.log("========================== TODO: これを捨ててる " + elm.title + " " + JSON.stringify(liElm));
@@ -97,13 +111,13 @@ export default {
             await db
               .insertInto('shownotes')
               .values({
-                episodeId: result.id,
+                episodeId: insertResult.id,
                 title: liElm.a.$text,
                 link: liElm.a.__href,
               })
               .executeTakeFirstOrThrow();
           } else {
-            if (typeof(liElm) === 'object'){
+            if (typeof (liElm) === 'object') {
               // console.log("========================== TODO: これを捨ててる " + elm.title + " " + JSON.stringify(liElm));
               continue;
             }
